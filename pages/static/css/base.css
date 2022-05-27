@@ -1,0 +1,195 @@
+body{
+    font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+}
+a{
+    text-decoration: none;
+}
+
+*{
+    margin: 0;
+}
+.header{
+    margin-bottom: 50px;
+}
+.container{
+    width: 1600px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.header-contacts__inner{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.phone-number{
+    font-weight: 400;
+}
+.header-contacts{
+    background-color: #dd4f83;
+    font-size: 20px;
+    color: white;
+}
+
+.nav__link {
+    display: inline-block;
+    background-size: 40px;
+    height: 40px;
+    width: 40px;
+    margin: 0 15px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+.instagram-link{
+    background-image: url(../img/instagram.svg);
+}
+.whatsapp-link{
+    background-image: url(../img/whatsapp.svg);
+}
+.viber-link{
+    background-image: url(../img/viber.svg);
+}
+.vk-link{
+    background-image: url(../img/vk.svg);
+}
+.header_nav{
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.header-nav__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-nav__inner nav{
+
+}
+.logo{
+    font-weight: 700;
+    font-size: 50px;
+    color: #dd4f83;
+}
+.nav-route{
+    text-decoration: none;
+    color: #222222;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 40px 40px;
+
+    transition: color .2s linear;
+}
+.nav-route:hover{
+    color: #dd4f83;
+}
+.enroll-btn{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #dd4f83;
+    color: white;
+    height: min-content;
+    margin: 0 10px;
+
+    transition: color .2s linear;
+}
+.enroll-btn:hover{
+    color: #222222;
+}
+.account_link{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #791b65;
+    color: white;
+    height: min-content;
+    margin: 0 10px;
+
+    transition: color .2s linear;
+}
+.account_link:hover{
+    color: #222222;
+}
+.user-name{
+    font-weight: 500;
+    font-size: 24px;
+}
+.btns-wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    color: #222222;
+    font-weight: 700;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+.info:after{
+    content: "";
+    display: block;
+    width: 30%;
+    height: 10px;
+    background-color: #791b65;
+}
+.footer{
+    border-top: 7px#dd4f83 solid;
+    padding: 15px;
+    margin-top: 30px;
+}
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+}
+.footer__inner___nav-route{
+    display: flex;
+    flex-direction: column;
+}
+.footer___nav-route{
+    text-decoration: none;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 21px;
+    padding: 7px 0;
+}
+.footer__inner___contact{
+    display: flex;
+    flex-direction: column;
+
+}
+.addres{
+    color: #222222;
+    font-weight: 400;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.footer__link{
+    display: inline-block;
+    background-size: 40px;
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+.vk-link-foot{
+    background-image: url(../img/vk-foot.svg);
+}
+.whatsapp-link-foot{
+    background-image: url(../img/whatsapp-foot.svg);
+}
+.instagram-link-foot{
+    background-image: url(../img/instagram-foot.svg);
+}
+.viber-link-foot{
+    background-image: url(../img/viber-foot.svg);
+}

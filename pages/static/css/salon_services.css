@@ -1,0 +1,22 @@
+
+table{
+    border-collapse: separate;
+    border-spacing: 5px;
+    color: #7a7a7a;
+    color: white;
+    border: 5px solid #7a7a7a;
+    margin-bottom: 30px;
+}
+th{
+    font-size: 25px;
+    padding: 10px;
+    background-color: #dd4f83;
+    width: 70%
+}
+td{
+    background-color: #dd4f83;
+    padding: 10px;
+    width: 600px;
+    font-size: 25px;
+}
+

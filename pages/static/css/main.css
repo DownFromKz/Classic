@@ -1,0 +1,220 @@
+.bricks-background{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-image: url(../img/pexels-tbee-82256.jpg);
+}
+.info-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-images-wrapper{
+
+}
+.start-images{
+    width: 700px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 8px solid white;
+    border-left: 8px solid white;
+    border-top: 8px solid white;
+}
+.start-info{
+    padding: 100px;
+    width: 500px;
+    background-color: white;
+}
+.start-info__title{
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.start-info__title:after{
+    margin-top: 10px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #791b65;
+}
+.start-infp__text{
+    line-height: 35px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #494949;
+}
+.services{
+    padding-top: 50px;
+    margin-bottom: 70px;
+}
+.title{
+    color: #222222;
+    font-weight: 600;
+    font-size: 56px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+.title:after{
+    margin-top: 5px;
+    content: "";
+    display: block;
+    width: 20%;
+    height: 8px;
+    background-color: #dd4f83;
+}
+.services-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.service-wrapper{
+    display: flex;
+    width: 400px;
+}
+.service-image{
+    width: 100px;
+    height: 100px;
+}
+.service-info-wrapper{
+    margin-left: 15px;
+}
+.service-name{
+    font-weight: 600;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.detail-services{
+    font-weight: 300;
+    font-size: 20px;
+}
+.section-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.card-wrapper{
+}
+.haircut-image{
+    margin-bottom: 20px;
+}
+.women-haircut{
+    font-weight: 400;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.haircut-price{
+   color: #dd4f83;
+   font-weight: 400;
+    font-size: 32px;
+}
+.women-haircut__text{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7a7a7a;
+    width: 600px;
+}
+.pricelist-services{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    align-items: center;
+}
+.elem-list{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 25px;
+    width: 600px;
+    text-transform: uppercase;
+    border-bottom: 5px dashed #222222;
+    transition: .2s linear;
+}
+.elem-list:hover{
+    color: #dd4f83;
+    border-bottom: 5px dashed #dd4f83;
+}
+.all-services{
+    margin: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #dd4f83;
+    color: white;
+    width: 250px;
+    text-align: center;
+
+    transition: color .2s linear;
+}
+.all-services:hover{
+    color: #222222;
+}
+
+.adversting{
+    padding: 40px 0;
+    background-color: #791b65;
+}
+.adversting-text{
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 56px;
+    text-transform: uppercase;
+}
+.showcase{
+
+}
+.table-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.elem-table{
+    border: 3px #dedede solid;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+.elem-name{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 23px;
+    text-align: center;
+}
+.elem-price{
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+    color: #dd4f83;
+}
+.all-products-wrapper{
+    text-align: center;
+    margin: 30px 0;
+}
+.all-products{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #dd4f83;
+    color: white;
+
+    transition: color .2s linear;
+
+}
+.all-products:hover{
+   color: #222222;
+}

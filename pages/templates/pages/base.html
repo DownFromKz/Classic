@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Классик</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-contacts">
+            <div class="container">
+                <div class="header-contacts__inner">
+                    <h2 class="phone-number">8 (485) 273-69-59</h2>
+                    <nav class="nav">
+                        <a href="#" class="nav__link viber-link"></a>
+                        <a href="#" class="nav__link whatsapp-link"></a>
+                        <a href="#" class="nav__link instagram-link"></a>
+                        <a href="#" class="nav__link vk-link"></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header_nav">
+            <div class="container">
+                <div class="header-nav__inner">
+                    <a href="{% url 'home' %}">
+                        <h2 class="logo">КЛАССИК</h2>
+                    </a>
+                    <nav>
+                        <a href="{% url 'about' %}" class="nav-route">о салоне</a>
+                        <a href="{% url 'services' %}" class="nav-route">услуги</a>
+                        <a href="{% url 'showcase' %}" class="nav-route">витрина</a>
+                        <a href="{% url 'contacts' %}" class="nav-route">контакты</a>
+                    </nav>
+                    <div class="btns-wrapper">
+                        {% if request.user.is_authenticated %}
+                        <a href="{% url 'account_page' %}" class="account_link"><h5 class="user-name">МОИ ЗАПИСИ</h5></a>
+                            {% url 'logout_page' as url_logout_page %}
+                            <a class="enroll-btn" href="{{url_logout_page}}">Выйти</a>
+                        {% else %}
+                            {% url 'register_page' as url_register_page %}
+                            <a class="enroll-btn" href="{{url_register_page}}">Регистрация</a>
+                            {% url 'login_page' as url_login_page %}
+                            <a class="enroll-btn" href="{{url_login_page}}">Авторизация</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__inner___nav-route">
+                    <a href="#" class="footer___nav-route">о салоне</a>
+                    <a href="#" class="footer___nav-route">услуги</a>
+                    <a href="#" class="footer___nav-route">витрина</a>
+                    <a href="#" class="footer___nav-route">контакты</a>
+                </div>
+                <div class="footer__inner___contact">
+                    <h5 class="addres">
+                        Мы находимся по адресу ул.Чкалова, 32
+                    </h5>
+                    <div class="social">
+                        <a href="#" class="footer__link viber-link-foot"></a>
+                        <a href="#" class="footer__link whatsapp-link-foot"></a>
+                        <a href="#" class="footer__link instagram-link-foot"></a>
+                        <a href="#" class="footer__link vk-link-foot"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

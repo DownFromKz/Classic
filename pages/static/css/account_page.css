@@ -1,0 +1,49 @@
+.records-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    color: #222222;
+    font-weight: 600;
+    font-size: 56px;
+
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+.title:after{
+    margin-top: 5px;
+    content: "";
+    display: block;
+    width: 120%;
+    height: 8px;
+    background-color: #dd4f83;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 5px;
+    color: #7a7a7a;
+    color: white;
+    border: 5px solid #7a7a7a;
+    margin-bottom: 30px;
+}
+th{
+    font-size: 25px;
+    padding: 10px;
+    background-color: #dd4f83;
+}
+td{
+    background-color: #dd4f83;
+    padding: 10px;
+    width: 600px;
+    font-size: 25px;
+}
+.delete{
+    text-align: center;
+}
+.delete-record{
+    color: black;
+    background-color: white;
+    padding: 8px;
+
+}

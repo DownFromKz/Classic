@@ -1,0 +1,64 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/showcase.css' %}">
+</head>
+<body>
+     <section class="showcase">
+        <div class="container">
+            <h2 class="title">
+                Витрина
+            </h2>
+            <div class="table-wrapper">
+                {% for product in products %}
+                <div class="elem-table">
+                    <img src="{% static product.path_image %}" alt="товар" class="elem-image">
+                    <h5 class="elem-name">{{product.name}}</h5>
+                    <span class="elem-price">{{product.price}}   руб</span>
+                </div>
+                {% endfor %}
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/JOICO_K-PAK_mask-600x600.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">JOICO К-РАК биомаска</h5>-->
+<!--                    <span class="elem-price">2,150 руб</span>-->
+<!--                </div>-->
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
+{% endblock %}

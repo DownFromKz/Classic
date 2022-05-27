@@ -1,0 +1,31 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">
+            Контакты
+        </h2>
+        <div class="main-wrapper">
+            <div class="contacts">
+                <img class="interior-image" src="{% static 'img/pervomayskaya_interier-oiegvzeh14xtqilt1wuup1qedd9ibf2ora73ct8xzw.jpg' %}" alt="интерьер">
+                <h3 class="info-salon">
+                    КЛАССИК НА ЧКАЛОВА
+                </h3>
+                <h4 class="address">
+                    Адрес: 150000, г. Ярославль, ул. Чкалова 32
+                </h4>
+                <h4 class="phone-number-contact">8 (485) 273-69-59</h4>
+            </div>
+            <div class="map-info">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

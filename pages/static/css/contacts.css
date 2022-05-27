@@ -1,0 +1,41 @@
+.title{
+    color: #222222;
+    font-weight: 600;
+    font-size: 56px;
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+.title:after{
+    margin-top: 5px;
+    content: "";
+    display: block;
+    width: 20%;
+    height: 8px;
+    background-color: #dd4f83;
+}
+.main-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.contacts{
+    width: 800px;
+}
+.interior-image{
+    height: 400px;
+    margin-bottom: 20px;
+}
+.info-salon{
+    font-weight: 400;
+    font-size: 32px;
+}
+.address{
+    font-weight: 400;
+    color: #666666;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.phone-number-contact{
+    font-weight: 400;
+    font-size: 24px;
+    color: #dd4f83;
+}

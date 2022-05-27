@@ -1,0 +1,24 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'css/choose_date_page.css'%}">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2 class="title">
+                Выберите дату
+            </h2>
+            <form method="post">
+              {% csrf_token %}
+              {{form}}
+              <button type="submit">Выбрать</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+{% endblock %}

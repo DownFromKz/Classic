@@ -1,0 +1,130 @@
+.bricks-background{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-image: url(../img/pexels-tbee-82256.jpg);
+}
+.info-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-images-wrapper{
+
+}
+.start-images{
+    width: 700px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 8px solid white;
+    border-left: 8px solid white;
+    border-top: 8px solid white;
+}
+.start-info{
+    padding: 100px;
+    width: 500px;
+    background-color: white;
+}
+.start-info__title{
+    text-align: center;
+    margin: 0 auto;
+    width: 200px;
+    font-weight: 600;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.start-info__title:after{
+    margin-top: 10px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: #791b65;
+}
+.start-infp__text{
+    line-height: 35px;
+    font-weight: 300;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #494949;
+}
+.title{
+    color: #222222;
+    font-weight: 600;
+    font-size: 56px;
+
+    margin: 40px 0;
+    text-transform: uppercase;
+}
+.title:after{
+    margin-top: 5px;
+    content: "";
+    display: block;
+    width: 20%;
+    height: 8px;
+    background-color: #dd4f83;
+}
+.team{
+    margin-top: 60px;
+}
+.teams-text{
+    color: #8c8c8c;
+    font-weight: 600;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.table-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.elem-table{
+    /* border: 3px #dedede solid; */
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 600px;
+    margin-bottom: 50px;
+    /* align-items: center; */
+}
+.elem-image{
+    height: 75%;
+    width: 100%;
+}
+.elem-name{
+    width: 50%;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 27px;
+    background-color: #dd4f83;
+    color: white;
+    margin-left: 10px;
+}
+.elem-detail{
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 23px;
+    font-weight: 400;
+    width: 70%;
+    background-color: #791b65;
+    color: white;
+}
+.all-products-wrapper{
+    text-align: center;
+    margin: 30px 0;
+}
+.all-products{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #dd4f83;
+    color: white;
+
+    transition: color .2s linear;
+
+}
+.all-products:hover{
+   color: #222222;
+}

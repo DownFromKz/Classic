@@ -1,0 +1,80 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/about-salon.css'%}">
+</head>
+<body>
+<div class="container">
+        <h2 class="title">
+            О салоне
+        </h2>
+    </div>
+
+    <div class="bricks-background">
+        <div class="container">
+            <div class="info-wrapper">
+                <div class="start-images-wrapper">
+                    <img class="start-images" src="{% static 'img/Obshee_foto.jpg' %}" alt="фотки">
+                </div>
+                <div class="start-info">
+
+                    <p class="start-infp__text"> “Красота — это наивысшая степень целесообразности,
+                        степень гармонического соответствия и сочетания противоречивых элементов
+                         во всяком устройстве, во всякой вещи, всяком организме. Именно наличие гармонии
+                         с самим собой дает нам духовное и телесное равновесие, подчеркивает наши
+                         индивидуальные, особенные, данные с рождения черты, делающие нас неповторимыми…”</p>
+                    <p class="start-infp__text">Высокий профессиональный уровень мастеров ,
+                        исключительный сервис  и комфортная обстановка – наши сильные стороны.</p>
+                    <p class="start-infp__text"> Наш салон красоты находятся в  удобной локации в
+                        центре города Ярославля, по адресу ул. Чкалова 32</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="team">
+        <div class="container">
+            <h2 class="title">
+                Наша команда
+            </h2>
+            <h4 class="teams-text">
+                СПЕЦИАЛИСТЫ САЛОНА КЛАССИК
+            </h4>
+            <div class="table-wrapper">
+                {% for elem in emp %}
+                    <div class="elem-table">
+                        <img src="{% static elem.path_image %}" alt="Сотрудник" class="elem-image">
+                        <h5 class="elem-name">{{elem.user.first_name}}</h5>
+                        <span class="elem-detail">{{elem.user.speciality}}</span>
+                    </div>
+                {% endfor %}
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/Julia-640x640.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">Юлия</h5>-->
+<!--                    <span class="elem-detail">мастер по наращиванию ресниц</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/Darya-1-640x640.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">Дарья</h5>-->
+<!--                    <span class="elem-detail">мастер ногтевого сервиса</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/Darya-1-640x640.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">Дарья</h5>-->
+<!--                    <span class="elem-detail">мастер ногтевого сервиса</span>-->
+<!--                </div>-->
+<!--                <div class="elem-table">-->
+<!--                    <img src="{% static 'img/Darya-1-640x640.jpg' %}" alt="товар" class="elem-image">-->
+<!--                    <h5 class="elem-name">Дарья</h5>-->
+<!--                    <span class="elem-detail">мастер ногтевого сервиса</span>-->
+<!--                </div>-->
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
+{% endblock %}

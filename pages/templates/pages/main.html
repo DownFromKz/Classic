@@ -1,0 +1,173 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+<body>
+    <div class="bricks-background">
+        <div class="container">
+            <div class="info-wrapper">
+                <div class="start-images-wrapper">
+                    <img class="start-images" src="{% static 'img/interier2.png' %}" alt="фотки">
+                </div>
+                <div class="start-info">
+                    <h5 class="start-info__title">
+                        САЛОН КРАСОТЫ «КЛАССИК»
+                    </h5>
+                    <p class="start-infp__text">Предоставляет широкий спектр услуг в области красоты:
+                        парикмахерские услуги, маникюр, педикюр,наращивание ресниц, наращивание волос,
+                        кератиновое выпрямление волос, мужские стрижки.</p>
+                    <p class="start-infp__text">Обратившись к нам, вы окунетесь
+                        в атмосферу уюта и доброжелательности. Каждый визит обязательно подарит
+                        Вам прекрасное настроение, а наша команда профессионалов откроет в вашем
+                        стиле что-то новое!</p>
+                    <p class="start-infp__text"> Сочетание демократических цен и качества сервиса,
+                        внимательное отношение к клиентам, уютный интерьер
+                        сделают незабываемым пребывание в наших салонах.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="title">
+                НАШИ УСЛУГИ
+            </h2>
+            <div class="services-wrapper">
+                <div class="service-wrapper">
+                    <img src="{% static 'img/parikmaherskie_uslugi.png' %}" alt="картинка" class="service-image">
+                    <div class="service-info-wrapper">
+                        <h3 class="service-name">
+                            Парикмахерские услуги
+                        </h3>
+                        <span class="detail-services">
+                            Стрижки, прически, окрашивание, выпрямление, биозавивка, ботокс
+                        </span>
+                    </div>
+                </div>
+                <div class="service-wrapper">
+                    <img src="{% static 'img/manicure_pedicure.png' %}" alt="картинка" class="service-image">
+                    <div class="service-info-wrapper">
+                        <h3 class="service-name">
+                            Маникюр и педикюр
+                        </h3>
+                        <span class="detail-services">
+                            Гель лак, френч, комбинированный, дизайн,снятие
+                        </span>
+                    </div>
+                </div>
+                <div class="service-wrapper">
+                    <img src="{% static 'img/brovi_resnicy.png' %}" alt="картинка" class="service-image">
+                    <div class="service-info-wrapper">
+                        <h3 class="service-name">
+                            Брови и ресницы
+                        </h3>
+                        <span class="detail-services">
+                            Окрашивание, наращивание, коррекция, ламинирование, завивка
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="services-wrapper">
+                <div class="service-wrapper">
+                    <img src="{% static 'img/makiyazh_pin.png' %}" alt="картинка" class="service-image">
+                    <div class="service-info-wrapper">
+                        <h3 class="service-name">
+                            Макияж
+                        </h3>
+                        <span class="detail-services">
+                            Свадебный, дневной, вечерний, для фотосессии
+                        </span>
+                    </div>
+                </div>
+                <div class="service-wrapper">
+                    <img src="{% static 'img/narashchivanie_volos_pin.png' %}" alt="картинка" class="service-image">
+                    <div class="service-info-wrapper">
+                        <h3 class="service-name">
+                            Наращивание волос
+                        </h3>
+                        <span class="detail-services">
+                            Первичное, коррекция, снятие
+                        </span>
+                    </div>
+                </div>
+                <div class="service-wrapper">
+                    <img src="{% static 'img/depilyaciya_pin.png' %}" alt="картинка" class="service-image">
+                    <div class="service-info-wrapper">
+                        <h3 class="service-name">
+                            Депиляция
+                        </h3>
+                        <span class="detail-services">
+                            Шугаринг, депиляция воском
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price">
+        <div class="container">
+            <h2 class="title">
+                НАШИ ЦЕНЫ
+            </h2>
+            <div class="section-wrapper">
+                <div class="card-wrapper">
+                    <img src="{% static 'img/strizhki-i-ukladki-11.jpg' %}" alt="стрижка" class="haircut-image">
+                    <h4 class="women-haircut">
+                        Женская стрижка
+                    </h4>
+                    <span class="haircut-price">
+                        1000 руб.
+                    </span>
+                    <p class="women-haircut__text">
+                        Женская стрижка с использованием укладочных и стайлинговых средств, консультирование в дальнейшем уходе за волосами.
+                    </p>
+                </div>
+                <div class="pricelist-services">
+                    {% for service in services %}
+                    <div class="elem-list">
+                        <h5 class="elem-title">{{service.name}}</h5>
+                        <span class="elem-price">{{service.price}} руб.</span>
+                    </div>
+                    {% endfor %}
+                    <a href="{% url 'services'%}" class="all-services">все услуги и цены</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="adversting">
+        <div class="container">
+            <h2 class="adversting-text">
+                ПОДПИСЫВАЙСЯ НА НАШИ СОЦИАЛЬНЫЕ СЕТИ И ПОЛУЧАЙ ИНФОРМАЦИЮ ОБ АКЦИЯХ И СКИДКАХ
+            </h2>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="container">
+            <h2 class="title">
+                Витрина
+            </h2>
+            <div class="table-wrapper">
+                {% for product in products %}
+                    <div class="elem-table">
+                        <img src="{% static product.path_image %}" alt="товар" class="elem-image">
+                        <h5 class="elem-name">{{product.name}}</h5>
+                        <span class="elem-price">{{product.price}}</span>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="all-products-wrapper">
+                <a href="{% url 'showcase' %}" class="all-products">Все товары</a>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/auth.css'%}">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div class="container">
+            {{request.user}}
+            <form id="reg-form" method="post">
+                <div class="form-wrapper">
+                {% csrf_token %}
+                    {{form}}
+                    <button form="reg-form" type="submit">Зарегистрироваться</button>
+                </div>
+            </form>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<html>
+<head>
+
+    <link rel="stylesheet" href="{% static 'css/salon_services.css'%}">
+    <title>Услуги</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="info">
+            полный перечень цен и услуг
+        </h2>
+        <table>
+            <tr>
+                <th>Услуга</th>
+                <th>Стоимость</th>
+            </tr>
+            {% for serv in services %}
+                <tr>
+                    <td>{{serv.name}}</td>
+                    <td>{{serv.price}}</td>
+                </tr>
+            {% endfor %}
+            <!-- <tr>
+                <td>Женская стрижка</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Мужская стрижка</td>
+                <td>700</td>
+            </tr>
+            <tr>
+                <td>Детская стрижка</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Подравнивание волос</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>Подравнивание волос с мытьем</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td>Челка</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Оформление усов/бороды</td>
+                <td>400</td>
+            </tr> -->
+        </table>
+    </div>
+</body>
+</html>
+{% endblock %}
+
