@@ -62,7 +62,7 @@
     display: block;
     width: 20%;
     height: 8px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
 }
 .team{
     margin-top: 60px;
@@ -96,7 +96,7 @@
     margin-top: 20px;
     font-weight: 400;
     font-size: 27px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
     margin-left: 10px;
 }
@@ -119,7 +119,7 @@
     font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
 
     transition: color .2s linear;
@@ -127,4 +127,34 @@
 }
 .all-products:hover{
    color: #222222;
+}
+@media screen and (max-width: 393px) {
+    .start-images{
+        display: none;
+    }
+    .start-info{
+        padding: 10px;
+        width: 360px;
+        background-color: white;
+    }
+    .start-infp__text{
+        color: #494949 ;
+    }
+    .title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .title::after{
+        width: 50%;
+    }
+    .teams-text{
+        font-size: 20px;
+    }
+    .elem-table{
+        width: 100%;
+        height: max-content;
+    }
+    .elem-image{
+        height: 60%;
+    }
 }

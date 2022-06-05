@@ -55,7 +55,7 @@ def services_view(req):
         {'services': Services.objects.all()}
     )
 @login_required(login_url='login_page')
-def UserAccount(req):
+def record_view(req):
     is_employee = False
     employee = Employee.objects.filter(user=req.user)
     if employee:
@@ -63,22 +63,22 @@ def UserAccount(req):
         record = Record.objects.filter(employee = employee[0])
     else:
         record = Record.objects.filter(user=req.user)
-    return render(req, 'pages/account_page.html',{
+    return render(req, 'pages/record_page.html',{
         'records': record,
         'is_employee': is_employee
     })
 @login_required(login_url='login_page')
 @client_user
 def choose_employee_view(req):
-    form = AddRecordForm()
+    form = EmployeeForm()
     data = None
     if req.method == 'POST':
-        form = AddRecordForm(req.POST)
+        form = EmployeeForm(req.POST)
         if form.is_valid():
             data = form.cleaned_data['employee'].id
             return redirect('choose_service_page', foo=data)
         else:
-            form = AddRecordForm()
+            form = EmployeeForm()
 
     return render(req, 'pages/choose_employee_page.html', {
         'form': form,
@@ -87,9 +87,8 @@ def choose_employee_view(req):
 @login_required(login_url='login_page')
 @client_user
 def choose_service_view(req, foo):
-    form = TempForm()
+    form = ServiceForm()
     form.fields['services'].queryset = Employee.objects.get(id=foo).services.all()
-    print(Employee.objects.get(id=foo).services.all())
     if req.method == 'POST':
         data = int(req.POST['services'][0])
         return redirect('choose_date_page', foo=foo, serv=data)
@@ -112,13 +111,11 @@ def choose_date_view(req, foo, serv):
     })
 @login_required(login_url='login_page')
 def delete_record_view(req, pk):
-    print('hfghgfhg')
     record = Record.objects.get(id=pk)
     send_mail('Отмена записи', f'Запись {record.date_record} к {record.employee.user.get_full_name()} на услугу {record.service.name} была отменена.',
               EMAIL_HOST_USER, [record.user.email], fail_silently=False)
-    print('dada')
     record.delete()
-    return redirect('account_page')
+    return redirect('record_page')
 
 def clear_arr_times(records):
     arr_times = [('09:00:00', '09:00'),
@@ -153,9 +150,6 @@ def choose_time_view(req, foo, serv, date):
     form.fields['time'].choices = arr_times
     if req.method == 'POST':
         parse_datetime = datetime.datetime.strptime(f'{date} {req.POST["time"]}', '%Y-%m-%d %H:%M:%S')
-
-        print(employee)
-        print(user)
         record = Record.objects.create(employee = employee, service = service, user = user, date_record = parse_datetime)
         record.save()
 
@@ -170,7 +164,6 @@ class RegisterUser(CreateView):
     template_name = 'pages/register.html'
     form_class = RegisterUserForm
     success_url = reverse_lazy('home')
-    # success_msg = 'Пользователь создан'
 
     def form_valid(self, form):
         form_valid = super().form_valid(form)

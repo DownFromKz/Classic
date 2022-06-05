@@ -16,8 +16,7 @@ class Product(models.Model):
     name = models.CharField(max_length=150, verbose_name='Название продукта')
     price = models.IntegerField(verbose_name='Цена')
     description = models.TextField(verbose_name='Описание')
-    path_image = models.TextField(verbose_name='Путь к файлу с изображением')
-    # models.Im
+    path_image = models.TextField(verbose_name='Путь к файлу с изображением')   
 
     class Meta:
         verbose_name = 'товары'
@@ -37,7 +36,7 @@ class Employee(models.Model):
         verbose_name_plural = 'Сотрудники'
 
     def __str__(self):
-        return f'{self.user.last_name} {self.user.first_name}, {self.user.username}'
+        return f'{self.user.last_name} {self.user.first_name}, {self.speciality}'
 
 class Record(models.Model):
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name='Специалист')

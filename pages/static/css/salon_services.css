@@ -10,13 +10,25 @@ table{
 th{
     font-size: 25px;
     padding: 10px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     width: 70%
 }
 td{
-    background-color: #dd4f83;
+    background-color: #1ba851;
     padding: 10px;
     width: 600px;
     font-size: 25px;
+}
+@media screen and (max-width: 393px) {
+    .info{
+        font-size: 28px;
+    }
+    .info::after{
+        width: 50%;
+    }
+
+    th, td{
+        font-size: 20px;
+    }
 }
 

@@ -65,7 +65,7 @@
     display: block;
     width: 20%;
     height: 8px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
 }
 .services-wrapper{
     display: flex;
@@ -109,7 +109,7 @@
     margin-bottom: 20px;
 }
 .haircut-price{
-   color: #dd4f83;
+   color: #1ba851;
    font-weight: 400;
     font-size: 32px;
 }
@@ -138,8 +138,8 @@
     transition: .2s linear;
 }
 .elem-list:hover{
-    color: #dd4f83;
-    border-bottom: 5px dashed #dd4f83;
+    color: #1ba851;
+    border-bottom: 5px dashed #1ba851;
 }
 .all-services{
     margin: 40px;
@@ -148,7 +148,7 @@
     font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
     width: 250px;
     text-align: center;
@@ -197,7 +197,7 @@
     font-size: 23px;
     font-weight: 400;
     text-align: center;
-    color: #dd4f83;
+    color: #1ba851;
 }
 .all-products-wrapper{
     text-align: center;
@@ -209,7 +209,7 @@
     font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
 
     transition: color .2s linear;
@@ -217,4 +217,51 @@
 }
 .all-products:hover{
    color: #222222;
+}
+@media screen and (max-width: 393px) {
+    .start-images{
+        display: none;
+    }
+    .start-info{
+        padding: 10px;
+        width: 360px;
+        background-color: transparent;
+        color: white;
+    }
+    .start-infp__text{
+        color:white;
+    }
+    .title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .title::after{
+        width: 50%;
+    }
+    .services-wrapper{
+        flex-direction: column;
+
+    }
+    .service-wrapper{
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    .card-wrapper{
+        display: none;
+    }
+    .pricelist-services{
+        margin: 0;
+    }
+    .elem-list{
+        width: 90%
+    }
+    .elem-title{
+        font-size: 20px;
+    }
+    .elem-price{
+        margin: 0;
+    }
+    .adversting-text{
+        font-size: 42px;
+    }
 }

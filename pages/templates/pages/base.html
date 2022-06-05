@@ -32,7 +32,7 @@
                     <a href="{% url 'home' %}">
                         <h2 class="logo">КЛАССИК</h2>
                     </a>
-                    <nav>
+                    <nav class="main-menu">
                         <a href="{% url 'about' %}" class="nav-route">о салоне</a>
                         <a href="{% url 'services' %}" class="nav-route">услуги</a>
                         <a href="{% url 'showcase' %}" class="nav-route">витрина</a>
@@ -40,7 +40,7 @@
                     </nav>
                     <div class="btns-wrapper">
                         {% if request.user.is_authenticated %}
-                        <a href="{% url 'account_page' %}" class="account_link"><h5 class="user-name">МОИ ЗАПИСИ</h5></a>
+                            <a href="{% url 'record_page' %}" class="account_link"><h5 class="user-name">МОИ ЗАПИСИ</h5></a>
                             {% url 'logout_page' as url_logout_page %}
                             <a class="enroll-btn" href="{{url_logout_page}}">Выйти</a>
                         {% else %}
@@ -50,6 +50,24 @@
                             <a class="enroll-btn" href="{{url_login_page}}">Авторизация</a>
                         {% endif %}
                     </div>
+                    <input type="checkbox" id="check-menu">
+                        <label for="check-menu" class=" menu-burger nav__link mobile_img"></label>
+                        <nav class="mobile-menu">
+                            <a href="{% url 'about' %}" class="mobile-menu-elem">о салоне</a>
+                            <a href="{% url 'services' %}" class="mobile-menu-elem">услуги</a>
+                            <a href="{% url 'showcase' %}" class="mobile-menu-elem">витрина</a>
+                            <a href="{% url 'contacts' %}" class="mobile-menu-elem">контакты</a>
+                            {% if request.user.is_authenticated %}
+                                <a href="{% url 'record_page' %}" class="mobile-menu-elem">МОИ ЗАПИСИ</a>
+                                {% url 'logout_page' as url_logout_page %}
+                                <a class="mobile-menu-elem" href="{{url_logout_page}}">Выйти</a>
+                            {% else %}
+                                {% url 'register_page' as url_register_page %}
+                                <a href="{{url_register_page}}" class="mobile-menu-elem">Регистрация</a>
+                                {% url 'login_page' as url_login_page %}
+                                <a href="{{url_login_page}}" class="mobile-menu-elem">авторизация</a>
+                            {% endif %}
+                        </nav>
                 </div>
             </div>
         </div>

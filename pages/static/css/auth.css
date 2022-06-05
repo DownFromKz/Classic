@@ -99,8 +99,7 @@
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 .helptext{
-    font-size: 25px;
-    font-weight: 400;
+    display: None;
 }
 .form-wrapper button{
     margin-top: 30px;
@@ -109,11 +108,19 @@
     font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
 
     transition: color .2s linear;
 }
 .form-wrapper button:hover{
     color: #222222;
+}
+@media screen and (max-width: 393px) {
+    .form-wrapper{
+        width: 90%;
+    }
+    label{
+        font-size: 26px;
+    }
 }

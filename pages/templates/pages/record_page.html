@@ -3,7 +3,7 @@
 {% block content %}
 <html lang="ru">
 <head>
-    <link rel="stylesheet" href="{% static 'css/account_page.css'%}">
+    <link rel="stylesheet" href="{% static 'css/record_page.css'%}">
 </head>
 <body>
     <section class="records">
@@ -21,13 +21,13 @@
                 <tr>
                     <th>Специалист</th>
                     <th>Услуга</th>
-                    <th>Стоимость</th>
+                    <th class="price">Стоимость</th>
                     <th>Дата</th>
                     <th></th>
                 </tr>
                 {% for elem in records %}
                     <tr>
-                        <td class="speciality">{{elem.employee.user.first_name}} {{elem.employee.speciality}}</td>
+                        <td class="speciality">{{elem.employee.user.get_full_name}} {{elem.employee.speciality}}</td>
                         <td class="services">{{elem.service.name}}</td>
                         <td class="price">{{elem.service.price}}</td>
                         <td class="date">{{elem.date_record}}</td>

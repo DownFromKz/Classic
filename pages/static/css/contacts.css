@@ -11,7 +11,7 @@
     display: block;
     width: 20%;
     height: 8px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
 }
 .main-wrapper{
     display: flex;
@@ -37,5 +37,21 @@
 .phone-number-contact{
     font-weight: 400;
     font-size: 24px;
-    color: #dd4f83;
+    color: #1ba851;
+}
+@media screen and (max-width: 393px) {
+    .title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .title::after{
+        width: 50%;
+    }
+    .contacts{
+        width: max-content;
+    }
+    .interior-image{
+        width: 100%;
+        height: max-content;
+    }
 }

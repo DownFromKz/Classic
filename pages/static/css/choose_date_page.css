@@ -19,7 +19,7 @@ label{
     display: block;
     width: 20%;
     height: 8px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
 }
 input[type="date"]{
     display: block;
@@ -44,7 +44,7 @@ input[type="date"]{
     font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
 
     transition: color .2s linear;
@@ -52,3 +52,12 @@ input[type="date"]{
 .container button:hover{
     color: #222222;
 }
+@media screen and (max-width: 393px) {
+    .title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .title::after{
+        width: 70%;
+}
+

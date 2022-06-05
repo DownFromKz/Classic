@@ -12,7 +12,7 @@
     display: block;
     width: 20%;
     height: 8px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
 }
 .table-wrapper{
     display: flex;
@@ -43,9 +43,21 @@
     font-size: 23px;
     font-weight: 400;
     text-align: center;
-    color: #dd4f83;
+    color: #1ba851;
 }
 .all-products-wrapper{
     text-align: center;
     margin: 30px 0;
+}
+@media screen and (max-width: 393px) {
+    .title{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .title::after{
+        width: 50%;
+    }
+    .elem-table{
+        height: max-content;
+    }
 }

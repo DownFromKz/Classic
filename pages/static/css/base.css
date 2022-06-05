@@ -27,7 +27,7 @@ a{
     font-weight: 400;
 }
 .header-contacts{
-    background-color: #dd4f83;
+    background-color: #1ba851;
     font-size: 20px;
     color: white;
 }
@@ -62,13 +62,13 @@ a{
     justify-content: space-between;
     align-items: center;
 }
-.header-nav__inner nav{
-
+#check-menu, .menu-burger, .mobile-menu{
+    display: none;
 }
 .logo{
     font-weight: 700;
     font-size: 50px;
-    color: #dd4f83;
+    color: #1ba851;
 }
 .nav-route{
     text-decoration: none;
@@ -81,7 +81,7 @@ a{
     transition: color .2s linear;
 }
 .nav-route:hover{
-    color: #dd4f83;
+    color: #1ba851;
 }
 .enroll-btn{
     text-transform: uppercase;
@@ -89,7 +89,7 @@ a{
     font-weight: 500;
     font-size: 24px;
     padding: 10px 20px;
-    background-color: #dd4f83;
+    background-color: #1ba851;
     color: white;
     height: min-content;
     margin: 0 10px;
@@ -139,7 +139,7 @@ a{
     background-color: #791b65;
 }
 .footer{
-    border-top: 7px#dd4f83 solid;
+    border-top: 7px#1ba851 solid;
     padding: 15px;
     margin-top: 30px;
 }
@@ -192,4 +192,83 @@ a{
 }
 .viber-link-foot{
     background-image: url(../img/viber-foot.svg);
+}
+.mobile_img{
+    background-image: url(../img/menu_mobile.svg);
+}
+@media screen and (max-width: 393px) {
+    .header-nav__inner{
+        position: relative;
+    }
+    #check-menu, .menu-burger, .mobile-menu{
+        display: block;
+    }
+    .main-menu{
+        font-size: 15px;
+        display: none;
+    }
+    .logo{
+        font-size: 30px;
+    }
+    #check-menu{
+        display: none;
+    }
+    .menu-burger{
+        display: block;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .mobile-menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.5s all;
+    }
+    .mobile-menu-elem{
+        display: block;
+        width: relative;
+        padding: 10px;
+        text-decoration: none;
+        background-color: #1ba851;
+        color: white;
+        border-top: 1px solid white;
+        font-weight: 600;
+        font-size: 17px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    #check-menu:checked ~ .mobile-menu{
+        max-height: 512px;
+    }
+    .container{
+        width: 375px;
+        font-size: 15px;
+    }
+    .btns-wrapper{
+        display: none;
+    }
+    .nav{
+        display: none;
+    }
+    .footer__inner{
+        padding: 0  10px;
+        font-size: 16px;
+    }
+    .footer__inner___contact{
+        max-width: 220px;
+    }
+    .footer___nav-route, .addres{
+        font-size: 18px;
+    }
+    .footer__link{
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+
 }
